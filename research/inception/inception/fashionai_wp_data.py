@@ -23,22 +23,22 @@ from __future__ import print_function
 from inception.dataset import Dataset
 
 
-class FlowersData(Dataset):
+class FashionAI_WP_Data(Dataset):
   """Flowers data set."""
 
   def __init__(self, subset):
-    super(FlowersData, self).__init__('Flowers', subset)
+    super(FashionAI_WP_Data, self).__init__('FashionAI_WP', subset)
 
   def num_classes(self):
     """Returns the number of classes in the data set."""
-    return 46
+    return 6
 
   def num_examples_per_epoch(self):
     """Returns the number of examples in the data subset."""
     if self.subset == 'train':
-      return 71762
+      return 18333
     if self.subset == 'validation':
-      return 7969
+      return 1000
 
   def download_message(self):
     """Instruction to download and extract the tarball from Flowers website."""
